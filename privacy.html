@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Cargo Square Match - Learn how we protect your privacy while you play.">
+    <title>Privacy Policy - Cargo Square Match</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --amber: #F5A623;
+            --amber-light: #FFD080;
+            --orange: #E07B2E;
+            --brown-dark: #3D2512;
+            --cream: #FFF8EE;
+            --cream-dim: #C8B99A;
+            --bg: #1A1209;
+            --bg-card: #271C0F;
+            --teal: #3DB8A0;
+            --red: #E85D4A;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bg);
+            color: var(--cream);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .bg-pattern {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.35;
+            background-image:
+                linear-gradient(45deg, rgba(245,166,35,0.06) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(245,166,35,0.06) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgba(245,166,35,0.06) 75%),
+                linear-gradient(-45deg, transparent 75%, rgba(245,166,35,0.06) 75%);
+            background-size: 48px 48px;
+            background-position: 0 0, 0 24px, 24px -24px, -24px 0;
+        }
+
+        .bg-glow {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(ellipse at 30% 20%, rgba(245,166,35,0.08) 0%, transparent 55%),
+                radial-gradient(ellipse at 75% 80%, rgba(61,184,160,0.06) 0%, transparent 50%);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .wrap {
+            max-width: 840px;
+            margin: 0 auto;
+            padding: 48px 20px 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--amber);
+            text-shadow: 0 2px 16px rgba(245,166,35,0.25);
+            margin-bottom: 6px;
+        }
+
+        .header-sub {
+            color: #7A6B55;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .accent-bar {
+            width: 56px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--amber), var(--orange));
+            margin: 14px auto 0;
+            border-radius: 4px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--amber-light);
+            text-decoration: none;
+            margin-bottom: 28px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 10px 24px;
+            border: 1px solid rgba(245,166,35,0.3);
+            border-radius: 30px;
+            background: rgba(245,166,35,0.06);
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            color: var(--amber);
+            border-color: rgba(245,166,35,0.5);
+            box-shadow: 0 0 18px rgba(245,166,35,0.1);
+            transform: translateX(-4px);
+        }
+
+        .policy {
+            background: linear-gradient(150deg, var(--bg-card), rgba(26,18,9,0.95));
+            border: 1px solid rgba(245,166,35,0.18);
+            border-radius: 28px;
+            padding: 44px 40px;
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.9s ease-out 0.2s both;
+        }
+
+        .policy::after {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 50px;
+            right: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--amber), transparent);
+            border-radius: 3px;
+        }
+
+        .effective {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #665A48;
+            margin-bottom: 32px;
+            padding-bottom: 22px;
+            border-bottom: 1px solid rgba(245,166,35,0.1);
+            letter-spacing: 1px;
+        }
+
+        .effective strong { color: var(--amber-light); }
+
+        h2 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.45rem;
+            font-weight: 600;
+            color: var(--cream);
+            margin-top: 36px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(245,166,35,0.1);
+        }
+
+        h2:first-of-type { margin-top: 0; }
+
+        h2 .num { color: var(--amber); }
+
+        .policy p {
+            margin: 12px 0;
+            line-height: 1.9;
+            color: var(--cream-dim);
+            font-size: 1rem;
+        }
+
+        .policy ul {
+            margin: 12px 0;
+            padding-left: 22px;
+            color: var(--cream-dim);
+        }
+
+        .policy li {
+            margin: 8px 0;
+            line-height: 1.85;
+            font-size: 1rem;
+        }
+
+        .policy li::marker { color: var(--amber); }
+
+        .policy a {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .policy a:hover { color: var(--amber); }
+
+        .hl { color: var(--amber); font-weight: 700; }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(245,166,35,0.12), transparent);
+            margin: 28px 0;
+        }
+
+        .callout {
+            background: rgba(61,184,160,0.06);
+            border: 1px solid rgba(61,184,160,0.2);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin: 18px 0;
+        }
+
+        .callout p { color: var(--cream-dim); margin: 0; }
+        .callout strong { color: var(--teal); }
+
+        .warn-box {
+            background: rgba(245,166,35,0.05);
+            border: 1px solid rgba(245,166,35,0.18);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin: 18px 0;
+        }
+
+        .warn-box p { color: var(--cream-dim); margin: 0; }
+        .warn-box strong { color: var(--amber); }
+
+        .contact-card {
+            background: rgba(245,166,35,0.05);
+            border: 1px solid rgba(245,166,35,0.2);
+            border-radius: 18px;
+            padding: 24px;
+            margin-top: 22px;
+            text-align: center;
+        }
+
+        .contact-card p { margin: 6px 0; color: #8A7D6A; }
+        .contact-card a { font-size: 1.05rem; color: var(--amber); }
+        .contact-card a:hover { color: var(--teal); }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(245,166,35,0.08);
+            color: #5A4E3E;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--amber);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover { color: var(--teal); }
+        footer p { margin: 6px 0; color: #5A4E3E; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .policy { padding: 28px 20px; }
+            h2 { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    <div class="bg-glow"></div>
+    <div class="wrap">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p class="header-sub">Cargo Square Match</p>
+            <div class="accent-bar"></div>
+        </header>
+
+        <a href="index.html" class="back-btn">&#8592; Back to Game</a>
+
+        <div class="policy">
+            <p class="effective"><strong>Effective Date:</strong> March 25, 2026</p>
+
+            <h2><span class="num">01</span> &mdash; Overview</h2>
+            <p>This Privacy Policy describes how <span class="hl">Cargo Square Match</span> ("the App") handles user information. The App is a puzzle game published on the Apple App Store by Aaqib Javed. We respect your privacy and have designed the App with data minimization in mind.</p>
+
+            <div class="divider"></div>
+
+            <h2><span class="num">02</span> &mdash; Data We Collect</h2>
+            <div class="callout">
+                <p><strong>We do not collect any personal data from users of this App.</strong> Cargo Square Match operates entirely on your device without requiring an account, login, or any form of personal input.</p>
+            </div>
+            <p>All game progress, including levels completed, scores, and power-up usage, is stored locally on your device. This data never leaves your device and is not accessible to us or any third party.</p>
+
+            <div class="divider"></div>
+
+            <h2><span class="num">03</span> &mdash; Categories of Data Not Collected</h2>
+            <p>For transparency, the following types of data are explicitly <strong>not</strong> gathered by the App:</p>
+            <ul>
+                <li>Names, email addresses, phone numbers, or other personal identifiers</li>
+                <li>Geographic location or GPS coordinates</li>
+                <li>Device advertising identifiers or fingerprints</li>
+                <li>Photos, camera data, microphone input, or media files</li>
+                <li>Contacts, calendars, or address book entries</li>
+                <li>Payment details or financial records</li>
+                <li>Usage analytics, crash reports, or diagnostic data transmitted externally</li>
+                <li>Health, fitness, or biometric information</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h2><span class="num">04</span> &mdash; Third-Party Integrations</h2>
+            <p>Cargo Square Match does not embed third-party advertising SDKs, analytics frameworks, or tracking libraries. The App does not share data with third parties for marketing, profiling, or any other purpose.</p>
+            <div class="warn-box">
+                <p><strong>App Store Distribution:</strong> The App is distributed through the Apple App Store. Apple may independently collect certain data (such as download statistics) in accordance with their own privacy policies. We recommend reviewing <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple's Privacy Policy</a> for details.</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <h2><span class="num">05</span> &mdash; Audience &amp; Children's Safety</h2>
+            <p>Cargo Square Match is rated 4+ and designed to be enjoyed by players of all ages. Because no personal data is collected, the App inherently complies with children's privacy regulations including the Children's Online Privacy Protection Act (COPPA) and the General Data Protection Regulation (GDPR) provisions for minors.</p>
+            <p>Parents and guardians can feel confident that their children's information is never at risk while using this App.</p>
+
+            <div class="divider"></div>
+
+            <h2><span class="num">06</span> &mdash; On-Device Data &amp; Security</h2>
+            <p>Your puzzle progress, preferences, and power-up inventory are stored exclusively on your device using standard local storage mechanisms provided by iOS. This data is protected by your device's built-in security features (passcode, Face ID, Touch ID, encryption at rest).</p>
+            <p>Since no data is transmitted to external servers, the risk of network-based data breaches is eliminated. Uninstalling the App will permanently erase all locally stored game data.</p>
+
+            <div class="divider"></div>
+
+            <h2><span class="num">07</span> &mdash; Your Choices &amp; Control</h2>
+            <p>You maintain full control over your experience with Cargo Square Match:</p>
+            <ul>
+                <li>Delete all game data by uninstalling the App from your device at any time</li>
+                <li>Manage App permissions (such as notifications) through iOS Settings</li>
+                <li>Reach out to us with questions or concerns using the contact information below</li>
+            </ul>
+            <p>Because we hold no personal data on our servers, there is nothing for us to access, export, or delete on your behalf.</p>
+
+            <div class="divider"></div>
+
+            <h2><span class="num">08</span> &mdash; Policy Updates</h2>
+            <p>Should we make changes to this Privacy Policy, the updated version will be published on this page with a revised effective date. Material changes, if any, will be communicated through the App or our website. Continued use of the App after an update constitutes acceptance of the revised terms.</p>
+
+            <div class="divider"></div>
+
+            <h2><span class="num">09</span> &mdash; Get in Touch</h2>
+            <p>If you have any questions about this Privacy Policy or how Cargo Square Match handles your information, please reach out:</p>
+            <div class="contact-card">
+                <p><strong>Developer:</strong> Aaqib Javed</p>
+                <p><strong>Email:</strong> <a href="mailto:agneswambua102099@proton.me">agneswambua102099@proton.me</a></p>
+                <p>We aim to respond to all inquiries promptly.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Cargo Square Match. All rights reserved.</p>
+            <p><a href="index.html">Back to Game</a></p>
+        </footer>
+    </div>
+</body>
+</html>
